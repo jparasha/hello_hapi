@@ -41,7 +41,9 @@ node {
 
        stage('Build Docker'){
 			echo 'Building Docker Image ..'
-            sh './dockerBuild.sh'
+			sh 'ls -l'
+			
+            sh 'dockerBuild.sh'
        }
 
        stage('Deploy Docker '){
