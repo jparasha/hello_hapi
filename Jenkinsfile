@@ -47,7 +47,9 @@ node {
        stage('Deploy Docker '){
 
          echo 'Deploying ..'
+		 
 		 sh 'ls -l'
+		 
          sh 'dockerDeploy.sh'       
 
        }
