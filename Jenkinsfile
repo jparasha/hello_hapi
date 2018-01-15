@@ -33,6 +33,8 @@ node {
 		 echo "Installing Modules"
          print "Environment will be : ${env.NODE_ENV}"
 		 sh 'ls -l'
+		 sh 'git pull'
+		 sh 'ls -l'
          sh 'node -v'
          sh 'npm prune'
          sh 'npm install'         
@@ -40,9 +42,7 @@ node {
        }
 
        stage('Build Docker'){
-			echo 'Building Docker Image ..'
-			sh 'ls -l'
-			sh 'git pull'
+			echo 'Building Docker Image ..'			
 			sh 'ls -l'
 			
             sh 'dockerBuild.sh'
