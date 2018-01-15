@@ -24,7 +24,9 @@ if (!module.parent) {
         if (err) {
             throw err;
         }
-        console.log(`Server running at: ${Server.info.uri}`);
+        console.log(
+            `
+            Hey There! Server is running at: ${Server.info.uri}`);
     });
 }
 
