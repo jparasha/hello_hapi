@@ -49,10 +49,12 @@ node {
 
        stage('Deploy Docker '){
 
-         		echo 'Deploying ..'
+                 	echo 'Deploying ..'
 		 
 			sh 'ls -l'
-		 
+		
+			sh 'chmod 777 ./dockerD.sh'			
+	 
         		sh './dockerD.sh'       
 
        }
