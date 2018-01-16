@@ -28,7 +28,7 @@ if (!module.parent) {
         }
         console.log(
             `
-            Hey There! Server is running at: ${Server.info.uri}`);
+  Hey There! The Server is running at: ${Server.info.uri}/hello`);
     });
 }
 
