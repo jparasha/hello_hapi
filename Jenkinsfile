@@ -34,6 +34,7 @@ node {
          print "Environment will be : ${env.NODE_ENV}"
 		 sh 'ls -l'		
 		 sh 'node -v'
+		 sh 'git pull origin master'
 	         sh 'npm prune'
 	         sh 'npm install'         
 
