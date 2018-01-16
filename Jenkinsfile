@@ -32,11 +32,10 @@ node {
          env.NODE_ENV = "test"
 		 echo "Installing Modules"
          print "Environment will be : ${env.NODE_ENV}"
-		 sh 'ls -l'
-		 sh 'ls -l'
-         sh 'node -v'
-         sh 'npm prune'
-         sh 'npm install'         
+		 sh 'ls -l'		
+		 sh 'node -v'
+	         sh 'npm prune'
+	         sh 'npm install'         
 
        }
 
@@ -44,16 +43,17 @@ node {
 			echo 'Building Docker Image ..'			
 			sh 'ls -l'
 			
-            sh 'dockerBuild.sh'
+			sh 'chmod 777 dockerB.sh'            
+			sh './dockerB.sh'
        }
 
        stage('Deploy Docker '){
 
-         echo 'Deploying ..'
+         		echo 'Deploying ..'
 		 
-		 sh 'ls -l'
+			sh 'ls -l'
 		 
-         sh 'dockerDeploy.sh'       
+        		sh './dockerD.sh'       
 
        }
 
