@@ -2,8 +2,10 @@
 const Hapi   = require('hapi');
 const Server = new Hapi.Server();
 const Hello  = require('./lib/hello');
+var morgan      = require('morgan');
 
 Server.connection({ port: 3000 });
+app.use(morgan('dev'));
 
 Server.route({
     method: 'GET',
