@@ -28,10 +28,10 @@ node {
     try {       
 
        stage('Build App'){
-
-         env.NODE_ENV = "test"
+                 checkout scm
+         	 env.NODE_ENV = "test"
 		 echo "Installing Modules"
-         print "Environment will be : ${env.NODE_ENV}"
+         	 print "Environment will be : ${env.NODE_ENV}"
 		 sh 'ls -l'		
 		 sh 'node -v'
 	         sh 'npm prune'
